@@ -90,8 +90,8 @@ datamean <- aggregate(cbind(dataset[,3:n]),
 
 
 # Creating the second table
-names(datamean) <- temp
+names(datamean) <- names(dataset)
 datamean <- arrange(datamean, Subject, Activity)
 
 # Store as txt
-write.table(datamean, "datamean.txt", quote=FALSE, row.names = FALSE)
+write.table(datamean, "datamean.txt", quote=FALSE, row.names = FALSE, sep=",")
